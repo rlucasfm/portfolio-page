@@ -1,6 +1,6 @@
 <template>
   <navbar/>
-  <router-view/>
+  <router-view/> 
 </template>
 
 <script>
@@ -12,6 +12,13 @@ export default {
   }
 }
 </script>
+
+<style>
+  body {
+    background-color: rgb(43, 44, 54);
+    overflow: hidden;
+  }
+</style>
 
 <style lang="scss">
 @import '~bulma/css/bulma.css';
