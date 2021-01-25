@@ -33,7 +33,7 @@ export default {
       },
       brText: {
         'header1': "Olá, eu sou Richard Lucas",
-        'motto1': "Eu posso desenvolver o software para resolver os seus problemas, então você não vai precisar."
+        'motto1': "Eu posso desenvolver o software para resolver o seu problema, assim você não vai precisar fazê-lo."
       }
     }
   },
