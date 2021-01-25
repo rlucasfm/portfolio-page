@@ -215,13 +215,11 @@ export default {
   border-style: solid;
   border-color: white;
   border-width: thin;
-  transition: border-color 3s;
   transition: transform 1s;
-  transition: color 2s;
-  transition: background-color 2s;
+  transition: color 1s;
+  transition: background-color 1s;
 }
 .card:hover{
-  border-color: rgb(245, 82, 82);
   background-color: white;
   color: black;
   transform: scale(1.1);  
