@@ -46,7 +46,7 @@
 }
 .fab:hover {
     color: white;
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 
 .fa {
@@ -59,7 +59,7 @@
 }
 
 .fa:hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 
 .fa-google {
