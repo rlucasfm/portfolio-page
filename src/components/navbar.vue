@@ -3,7 +3,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="#">
-      <img src="img/rlicon2.png">
+      
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -15,26 +15,29 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-         
+         <button class="button navbar-item mt-2 ml-2" id="btnlang" style="background-color: black" @click="$emit('changeLang')">{{actuallang}}</button>
     </div>
 
-    <div class="navbar-end">
+    <div class="navbar-end">            
+
       <a class="navbar-item">
-        <router-link to="/" class="navbar-item" style="color:white; font-weight:600;">It's Me</router-link>
+        <router-link to="/" class="navbar-item" style="color:white; font-weight:600;">{{getMessage('menu1')}}</router-link>
       </a>
 
       <a class="navbar-item">
-        <router-link to="/projects" class="navbar-item" style="color:white; font-weight:600;">Projects</router-link> 
+        <router-link to="/projects" class="navbar-item" style="color:white; font-weight:600;">{{getMessage('menu2')}}</router-link> 
       </a>  
 
       <a class="navbar-item">
-        <router-link to='/resume' class="navbar-item" style="color:white; font-weight:600;">Resumé</router-link> 
+        <router-link to='/knowme' class="navbar-item" style="color:white; font-weight:600;">{{getMessage('menu3')}}</router-link> 
       </a> 
 
       <a class="navbar-item">
-        <router-link to='/contact' class="navbar-item" style="color:white; font-weight:600;">Contact-me</router-link> 
+        <router-link to='/contact' class="navbar-item" style="color:white; font-weight:600;">{{getMessage('menu4')}}</router-link> 
       </a> 
+      
     </div>
+    
   </div>
 </nav>
 
@@ -46,7 +49,33 @@
 
 <script>
 export default {
-  
+  props: ['actuallang'],
+  data() {
+    return {
+      message: 'EN',
+      englishText: {
+        'menu1': "It's me",
+        'menu2': "Projects",
+        'menu3': "Know me better",
+        'menu4': "Contact-me"
+      },
+      brText: {
+        'menu1': "Sou eu",
+        'menu2': "Projetos",
+        'menu3': "Me conheça melhor",
+        'menu4': "Entre em contato"
+      }
+    }
+  },
+  methods: {
+    getMessage(textContext){
+      if(this.actuallang == 'EN'){
+        return this.englishText[textContext]
+      }else{
+        return this.brText[textContext]
+      }
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -54,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Get all "navbar-burger" elements
   const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
+  localStorage.setItem('lang', 'EN');
   // Check if there are any navbar burgers
   if ($navbarBurgers.length > 0) {
 
@@ -74,6 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
+
 </script>
 
 <style>

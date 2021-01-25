@@ -3,15 +3,18 @@
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <div class="container">
-      <navbar/>
+      <navbar :actuallang="message" @change-lang='changelang'/>
     </div>
   </div>
 
   <div class="hero-body">
     <div class="container">
-      <transition name="slide" mode="out-in">
-        <router-view :key="$route.path"/> 
-      </transition>      
+      <router-view v-slot="{ Component }" :actuallang="message">
+        <transition name="slide" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
+
     </div>
   </div>
   
@@ -22,6 +25,20 @@
 import navbar from '@/components/navbar.vue'
 
 export default {
+  data () {
+    return {
+      message: 'EN'
+    }
+  },
+  methods: {
+    changelang(){
+      if(this.message == 'EN'){
+        this.message = 'PT'
+      }else{
+        this.message = 'EN'
+      }
+    }
+  },
   components: {
     navbar
   }
