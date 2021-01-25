@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+  	"start": "node server",
+  	"postinstall": "npm run build",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -10,6 +12,8 @@
   "dependencies": {
     "bulma": "^0.9.1",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0"
   },
