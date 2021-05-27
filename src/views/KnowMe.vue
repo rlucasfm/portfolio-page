@@ -28,7 +28,7 @@ export default {
       englishText: {
         'header1'   : "I'm a developer!",
         'desc1'     : "With more than 6 years on developing programming skills, technician in Industrial Automation by one of the most respected Technical Institutes on Brazil, Instituto Federal de Ciência, Educação e Tecnologia do Maranhão, and Electrical Engineer in the same instutite.",
-        'desc2'     : "Inherited (My life is OOP!) the love for development and programming from my dad, who ignited in me the wish to travel on this learning journey, even influencing me in learning Delphi bakc in the days.",
+        'desc2'     : "Inherited (My life is OOP!) the love for development and programming from my dad, who ignited in me the wish to travel on this learning journey, even influencing me in learning Delphi back in the days.",
         'desc3'     : "Always learning more technologies and trying to stay on the top of what is the state-of-the-art in development. Nowadays working with JavaScript (With techonlogies like NodeJS and frameworks/libraries like VueJS, jQuery...), PHP (Including frameworks like Laravel and Code Igniter 4), Python (Mostly for Data Science and Machine Learning with TensorFlow, Pandas, SciPy...) and what most be needed for solving the problem!"
       },
       brText: {
